@@ -1,8 +1,8 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import * as dotenv from 'dotenv';
-import { Customer } from '../entities/Customer';
-import { DashboardData } from '../entities/DashboardData';
+import { Customer } from './entity/Customer';
+import { DashboardData } from './entity/DashboardData';
 
 dotenv.config();
 
@@ -16,7 +16,7 @@ export const AppDataSource = new DataSource({
   synchronize: process.env.NODE_ENV === 'development', // Auto-create tables in development
   logging: process.env.NODE_ENV === 'development',
   entities: [Customer, DashboardData],
-  migrations: ['src/migrations/**/*.ts'],
+  migrations: ['src/migration/**/*.ts'],
   subscribers: [],
   options: {
     encrypt: false, // Set to true if using Azure SQL

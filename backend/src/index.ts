@@ -4,7 +4,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import { AppDataSource } from './config/data-source';
+import { AppDataSource } from './data-source';
 
 // Routes
 import authRoutes from './routes/auth.routes';

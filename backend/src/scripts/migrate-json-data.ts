@@ -10,9 +10,9 @@
 import 'reflect-metadata';
 import * as fs from 'fs';
 import * as path from 'path';
-import { AppDataSource } from '../config/data-source';
-import { Customer } from '../entities/Customer';
-import { DashboardData } from '../entities/DashboardData';
+import { AppDataSource } from '../data-source';
+import { Customer } from '../entity/Customer';
+import { DashboardData } from '../entity/DashboardData';
 
 interface JsonCustomer {
   Id: string;
